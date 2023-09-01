@@ -18,8 +18,7 @@ def solution(places):
                         if not visit[nx][ny]:
                             if board[nx][ny] == 'P': return False
                             elif board[nx][ny] == 'X': continue
-                            else: queue.append((nx, ny)); visit[nx][ny] = True
-                    
+                            else: queue.append((nx, ny)); visit[nx][ny] = True         
         return True
                     
     
