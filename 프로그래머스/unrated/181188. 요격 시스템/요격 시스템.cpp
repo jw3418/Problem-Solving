@@ -19,7 +19,7 @@ int solution(vector<vector<int>> targets) {
     //     cout << '\n';
     // }
     
-    int curr = -1;
+    int curr = 0;
     int answer = 0;
     for (int i=0; i<targets.size(); i++){
         if (curr > targets[i][0] && curr <= targets[i][1]){

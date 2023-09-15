@@ -1,10 +1,10 @@
 # [unrated] 요격 시스템 - 181188 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181188?language=cpp) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181188) 
 
 ### 성능 요약
 
-메모리: 4.23 MB, 시간: 0.01 ms
+메모리: 4.04 MB, 시간: 0.01 ms
 
 ### 구분
 
