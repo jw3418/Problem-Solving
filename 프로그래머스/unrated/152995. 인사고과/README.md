@@ -1,10 +1,10 @@
 # [unrated] 인사고과 - 152995 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/152995) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/152995?language=cpp) 
 
 ### 성능 요약
 
-메모리: 35.8 MB, 시간: 122.26 ms
+메모리: 21.6 MB, 시간: 200.09 ms
 
 ### 구분
 
