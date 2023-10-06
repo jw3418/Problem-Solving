@@ -32,9 +32,10 @@ while queue:
         for i in range(4):
             nx = x + dx[i]; ny = y + dy[i]; nflag1 = flag1; nflag2 = flag2 #nflag1, nflag2로 따로 할당해줘야함! node 별로 독립적인거니까..
             if 0 <= nx < N and 0 <= ny < M and board[nx][ny] != '#' and i != pre_dir:
-                if not visit[i][nx][ny][flag1][flag2]:
-                    if board[nx][ny] == 'C1': nflag1 = 1
-                    elif board[nx][ny] == 'C2': nflag2 = 1
+                if board[nx][ny] == 'C1': nflag1 = 1
+                elif board[nx][ny] == 'C2': nflag2 = 1
+
+                if not visit[i][nx][ny][nflag1][nflag2]:
                     visit[i][nx][ny][nflag1][nflag2] = True
                     queue.append((nx, ny, i, nflag1, nflag2))
     answer += 1
