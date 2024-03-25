@@ -8,7 +8,7 @@ l, r = 0, 0
 type_ = 0
 while l <= N-1:
     r = l + K
-    tmp = set(); flag = True
+    tmp = set()
     for i in range(l, r):
         i %= N
         tmp.add(sushi[i])
