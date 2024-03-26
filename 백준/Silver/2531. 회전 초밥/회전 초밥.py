@@ -1,20 +1,36 @@
-import sys
-input = sys.stdin.readline
+from sys import stdin
+from collections import defaultdict
 
-N, D, K, C = map(int, input().split())
-sushi = [int(input()) for n in range(N)]
 
-l, r = 0, 0
-type_ = 0
-while l <= N-1:
-    r = l + K
-    tmp = set()
-    for i in range(l, r):
-        i %= N
-        tmp.add(sushi[i])
+def main():
+    def input():
+        return stdin.readline().rstrip()
 
-    cnt = len(tmp)
-    if C not in tmp: cnt += 1
-    type_ = max(type_, cnt)
-    l += 1
-print(type_)
+    N, d, k, c = map(int, input().split())
+    sushis = [int(input()) for _ in range(N)]
+    plates = defaultdict(int)
+    plates[c] = 1
+
+    cnt = 1
+    for i in range(k):
+        if plates[sushis[i]] == 0:
+            cnt += 1
+        plates[sushis[i]] += 1
+
+    res = cnt
+    for end in range(k, N + k - 1):
+        plates[sushis[end - k]] -= 1
+        if plates[sushis[end - k]] == 0:
+            cnt -= 1
+
+        plates[sushis[end % N]] += 1
+        if plates[sushis[end % N]] == 1:
+            cnt += 1
+
+        res = max(cnt, res)
+
+    print(res)
+
+
+if __name__ == "__main__":
+    main()
