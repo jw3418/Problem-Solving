@@ -27,7 +27,7 @@ cnt = 0
 for i in range(N):
     for j in range(M):
         if visit[i][j] == -1:
-            if dfs(i, j) != 0:
+            if dfs(i, j) == 1:
                 cnt += 1
         elif visit[i][j] == 1:
             cnt += 1
