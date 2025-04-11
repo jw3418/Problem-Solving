@@ -29,7 +29,6 @@ int solution(vector<vector<string>> clothes) {
         answer *= (map.second.size() + 1);
     }
     answer -= 1;
+    
     return answer;
-    
-    
 }
