@@ -14,11 +14,6 @@ int solution(int bridge_length, int weight, vector<int> truck_weights) {
     int seconds = 0;
     while (!Truck.empty())
     {        
-        if (Bridge.size() == bridge_length)
-        {
-            BSum -= Bridge.front();
-            Bridge.pop_front();
-        }
         if (Bridge.size() < bridge_length)
         {
             if ((weight - BSum) >= Truck.front())
@@ -31,6 +26,11 @@ int solution(int bridge_length, int weight, vector<int> truck_weights) {
             {
                 Bridge.push_back(0);
             }
+        }
+        if (Bridge.size() == bridge_length)
+        {
+            BSum -= Bridge.front();
+            Bridge.pop_front();
         }
 
         seconds++;
