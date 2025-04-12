@@ -4,7 +4,6 @@ def solution(prices):
     result = []
     
     for i in range(N-1):
-        
         cnt = 0
         for j in range(i, N-1):
             if prices[i] <= prices[j]:
