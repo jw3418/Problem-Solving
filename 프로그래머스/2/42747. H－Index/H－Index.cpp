@@ -1,7 +1,6 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-#include <iostream>
 
 using namespace std;
 
@@ -11,11 +10,6 @@ int solution(vector<int> citations) {
          {
              return a > b;
          });
-    
-    // for (auto &it: citations)
-    // {
-    //     cout << it << " ";
-    // }
     
     int H_idx = citations[0];
     while (H_idx >= 0)
