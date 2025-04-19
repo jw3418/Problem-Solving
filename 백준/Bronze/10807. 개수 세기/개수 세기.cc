@@ -18,15 +18,7 @@ int main()
 	int V;
 	cin >> V;
 
-	int cnt = 0;
-	for (int i = 0; i < N; ++i)
-	{
-		if (vec[i] == V)
-		{
-			cnt++;
-		}
-	}
-
+	int cnt = count(vec.begin(), vec.end(), V);
 	cout << cnt;
 
 	return 0;
