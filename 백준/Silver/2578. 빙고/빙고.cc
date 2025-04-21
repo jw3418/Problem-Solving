@@ -8,18 +8,14 @@ using namespace std;
 
 int main()
 {
-	vector<vector<int>> board;
 	map<int, pair<int, int>> coor;
 	for (int i = 0; i < 5; ++i)
 	{
-		vector<int> row;
 		for (int j = 0; j < 5; ++j)
 		{
 			int t; cin >> t;
-			row.push_back(t);
 			coor[t] = {i, j};
 		}
-		board.push_back(row);
 	}
 
 	vector<int> cmds;
