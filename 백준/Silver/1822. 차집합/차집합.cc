@@ -24,25 +24,17 @@ int main()
 		B.insert(t);
 	}
 
-	set<int> result;
-	int cnt = 0;
+	vector<int> result;
 	for (auto &a : A)
 	{
-		if (B.find(a) != B.end())
+		if (B.find(a) == B.end())
 		{
-			continue;;
-		}
-		else
-		{
-			result.insert(a);
-			cnt++;
+			result.push_back(a);
 		}
 	}
 
-	vector<int> ans(result.begin(), result.end());
-	sort(ans.begin(), ans.end());
-	cout << cnt << endl;
-	for (auto it : ans)
+	cout << result.size() << endl;
+	for (auto it : result)
 	{
 		cout << it << " ";
 	}
