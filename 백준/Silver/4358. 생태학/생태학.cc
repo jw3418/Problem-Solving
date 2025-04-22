@@ -16,14 +16,15 @@ int main()
 	map<string, int> Counter;
 	while (getline(cin, line))
 	{
-		if (line.empty()) break;
 		N++;
 		Counter[line]++;
 	}
 
+	cout << fixed << setprecision(4);
+
 	for (auto pair : Counter)
 	{
-		cout << pair.first << " " << fixed << setprecision(4) << (double)pair.second / N * 100 << endl;
+		cout << pair.first << " " << (double)pair.second / N * 100 << endl;
 	}
 
     return 0;
